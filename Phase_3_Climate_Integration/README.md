@@ -2,52 +2,92 @@
 
 ## Objective
 
-Integrate meteorological drivers with Dhaka air pollution observations (2000-2025).
+Integrate air pollution observations with satellite remote sensing and climate reanalysis datasets.
 
-## Workflow
+---
 
-1. Acquire ERA5 reanalysis data
-2. Quality control climate variables
-3. Merge climate and pollution datasets
-4. Analyze climate-pollution relationships
-5. Develop predictive models
+# Data Sources
 
-## ERA5 Variables
+## Remote Sensing
 
-Daily variables:
+- MODIS Aerosol Optical Depth (AOD)
+- MODIS Land Surface Temperature (LST)
+- Sentinel-5P NO2
 
-- 2m temperature
-- 2m relative humidity
-- 10m wind components
-- Total precipitation
-- Boundary layer height
+## Climate Data
+
+ERA5-Land variables:
+
+- Temperature
+- Dewpoint temperature
+- Rainfall
 - Surface pressure
+- Wind speed
 
-## Study Location
+---
 
-Dhaka, Bangladesh
-
-Approximate coordinates:
-
-Latitude: 23.81
-Longitude: 90.41
-
-## Planned Outputs
+# Processing Workflow
 
 ```
-Phase_3_Climate_Integration/
-
-├── climate_data/
-│   └── era5_dhaka_daily_2000_2025.csv
-│
-├── preprocessing/
-│   └── climate_quality_check.ipynb
-│
-├── analysis/
-│   ├── climate_pollution_correlation.ipynb
-│   └── climate_feature_engineering.ipynb
-│
-└── results/
-    ├── climate_summary.csv
-    └── correlation_matrix.csv
+Remote Sensing Data
+        ↓
+Climate Data Extraction
+        ↓
+Monthly Aggregation
+        ↓
+Feature Engineering
+        ↓
+Statistical Analysis
 ```
+
+---
+
+# Statistical Analysis
+
+Implemented:
+
+- Summary statistics
+- Pearson correlation
+- Spearman correlation
+- Seasonal analysis
+- Trend analysis
+- Lag correlation
+- Partial correlation
+- Variance Inflation Factor (VIF)
+
+---
+
+# Results
+
+Stored in:
+
+```
+results/
+
+phase3_2_3_results/
+
+phase3_2_4_results/
+```
+
+Outputs include:
+
+- Correlation matrices
+- Climate-pollution relationships
+- Feature statistics
+- Multicollinearity assessment
+
+---
+
+# Figures
+
+Stored in:
+
+```
+figures/
+```
+
+Including:
+
+- PM2.5 trend analysis
+- Seasonal patterns
+- Extreme pollution analysis
