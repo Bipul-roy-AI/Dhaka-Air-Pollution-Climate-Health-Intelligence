@@ -1,76 +1,154 @@
 # Dhaka Air Pollution Climate Health Intelligence
 
-A research-oriented open-source project studying air pollution dynamics in Dhaka, Bangladesh using statistical analysis, machine learning, remote sensing, and climate data integration.
+## Overview
 
-## Study Area
-Dhaka Metropolitan Area, Bangladesh
+The Dhaka Air Pollution Climate Health Intelligence Project is a long-term environmental data science framework investigating air pollution dynamics in Dhaka, Bangladesh.
 
-## Dataset
+The project integrates:
 
-Air quality dataset:
-- Time period: 2000-2025
-- Variables:
-  - Latitude
-  - Longitude
-  - AQI
-  - PM2.5
-  - PM10
-  - NO2
-  - SO2
+- Ground-based PM2.5 observations
+- Satellite remote sensing products
+- Climate reanalysis datasets
+- Statistical time-series analysis
+- Machine learning preparation workflows
 
-## Research Goals
+Study period: **2000–2025**
 
-- Quantify long-term air pollution trends.
-- Identify seasonal and extreme pollution patterns.
-- Build machine learning models for pollution prediction.
-- Integrate satellite and climate variables.
-- Develop reproducible geospatial analysis workflows.
+---
 
-## Workflow
+# Research Objectives
 
-### Phase 1: Data Quality Assessment
-- Dataset inspection
-- Missing value analysis
-- Outlier detection
-- Temporal coverage assessment
-- Station-level evaluation
+This project investigates:
 
-### Phase 2: Statistical Analysis
-- Time-series decomposition
-- Trend estimation
-- Seasonal variability
+1. Long-term PM2.5 pollution behaviour
+2. Seasonal pollution variability
+3. Relationships between pollution and climate variables
+4. Satellite-based pollution indicators
+5. Machine learning frameworks for PM2.5 analysis
+
+---
+
+# Research Workflow
+
+```
+Air Quality Data
+        ↓
+Data Quality Control
+        ↓
+Pollution Dynamics Analysis
+        ↓
+Remote Sensing + Climate Integration
+        ↓
+Feature Engineering
+        ↓
+Machine Learning Framework
+        ↓
+Model Evaluation
+```
+
+---
+
+# Repository Structure
+
+## Phase 2 — Pollution Dynamics
+
+Contains:
+
+- Long-term pollution analysis
+- Trend analysis
+- PCA analysis
 - Correlation analysis
-- Extreme event characterization
 
-### Phase 3: Machine Learning
-Planned methods:
-- Random Forest
-- Gradient Boosting
-- XGBoost
-- Time-series forecasting models
+## Phase 3 — Climate Integration
 
-### Phase 4: Remote Sensing and Climate Integration
-Potential datasets:
-- Sentinel-5P TROPOMI NO2
-- MODIS Aerosol Optical Depth
-- ERA5 meteorological variables
-- Land surface temperature
+Contains:
 
-## Repository Structure
+- MODIS AOD integration
+- MODIS LST integration
+- Sentinel-5P NO2 integration
+- ERA5-Land climate variables
+- Feature engineering
+- Climate-pollution relationship analysis
 
-```
-notebooks/
-  exploratory_analysis/
-  statistical_models/
-  machine_learning/
-  remote_sensing/
+## Phase 3.3 — Machine Learning Framework
 
-src/
-outputs/
-reports/
-data/
-```
+Contains:
 
-## Progress
+- Temporal train/validation/test splits
+- Forecasting datasets
+- Attribution datasets
+- Model evaluation outputs
 
-Repository initialized. Analysis pipeline development will be added incrementally with code, results, maps, and documentation.
+---
+
+# Key Analyses Completed
+
+## Pollution Dynamics
+
+Methods:
+
+- Descriptive statistics
+- Trend analysis
+- PCA
+- Correlation analysis
+- Seasonal analysis
+
+## Climate Integration
+
+Variables:
+
+- PM2.5
+- AOD
+- LST
+- NO2
+- Temperature
+- Rainfall
+- Pressure
+- Wind speed
+
+Methods:
+
+- Pearson correlation
+- Spearman correlation
+- Lag correlation
+- Partial correlation
+- VIF analysis
+
+---
+
+# Machine Learning Framework
+
+A strict temporal split is used:
+
+| Dataset | Period |
+|---|---|
+| Training | 2000–2020 |
+| Validation | 2021–2023 |
+| Testing | 2024–2025 |
+
+Two modelling perspectives:
+
+## Forecasting Framework
+
+Predict future PM2.5 behaviour using historical and environmental variables.
+
+## Attribution Framework
+
+Investigate relationships between environmental drivers and PM2.5 variability.
+
+---
+
+# Figures
+
+Repository figures include:
+
+- Long-term PM2.5 trends
+- Seasonal pollution cycle
+- Observation coverage
+- Extreme pollution frequency analysis
+
+---
+
+# Reproducibility
+
+All datasets, methods, scripts, figures, and results are organized by research phase.
